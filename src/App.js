@@ -23,10 +23,16 @@ import {
 } from "./pages";
 import "./App.css";
 import Financial from "./pages/Charts/Financial";
+<<<<<<< HEAD
 import { useStateContext } from "./contexts/ContextProvider";
 
 export const App = () => {
   const { activeMenu } = useStateContext();
+=======
+
+export const App = () => {
+  const activeMenu = true;
+>>>>>>> b20e00850c0b1be14011091496912c99653fa8ff
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -35,7 +41,11 @@ export const App = () => {
             <button
               type="button"
               className="text-3x1 p-3 hover:drop-shadow hover:bg-light-gray text-white"
+<<<<<<< HEAD
               style={{ background: "brown", borderRadius: "50%" }}
+=======
+              style={{ background: "black", borderRadius: "50%" }}
+>>>>>>> b20e00850c0b1be14011091496912c99653fa8ff
             >
               <FiSettings />
             </button>
