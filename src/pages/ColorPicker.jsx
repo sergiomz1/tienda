@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const ColorPicker =() => {
-  return (
-    <div>ColorPicker</div>
-  )
+function ColorPicker() {
+  return <div>ColorPicker</div>;
 }
 
-export default ColorPicker
+export default ColorPicker;
