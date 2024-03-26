@@ -23,9 +23,10 @@ import {
 } from "./pages";
 import "./App.css";
 import Financial from "./pages/Charts/Financial";
+import { useStateContext } from "./contexts/ContextProvider";
 
 export const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
