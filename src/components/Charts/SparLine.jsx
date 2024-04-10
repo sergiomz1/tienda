@@ -1,6 +1,6 @@
 import React from "react";
 
-function SparLine() {
+function SparLine () {
   return <div>SparLine</div>;
 }
 
