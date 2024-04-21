@@ -1,22 +1,33 @@
-import { FormulasErrorsStrings } from '@syncfusion/ej2/spreadsheet'
-import React, {createContext, useContext, useState} from 'react'
+/* eslint-disable no-unused-vars */
+import React, { createContext, useContext, useState } from 'react'
 
 const StateContext = createContext()
+
 const initialState = {
-  chat : false,
+  chat: false,
   cart: false,
-  userProfile : false, 
-  notification : false
+  userProfile: false,
+  notification: false
 }
 
-export const ContextProvider =({ children }) => {
-  const [ activeMenu, setActiveMenu ] = useState(true)
+export const ContextProvider = ({ children }) => {
+  const [activeMenu, setActiveMenu] = useState(true)
+  const [isClicked, setIsClicked] = useState(initialState)
+  const [screenSize, setScreenSize] = useState(undefined)
+  const handleClick = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: true })
+  }
   return (
     <StateContext.Provider
-    value={{
-      activeMenu,
-      setActiveMenu
-    }}
+      value={{
+        activeMenu,
+        setActiveMenu,
+        isClicked,
+        setIsClicked,
+        handleClick,
+        screenSize,
+        setScreenSize
+      }}
     >
       {children}
     </StateContext.Provider>
