@@ -5,8 +5,8 @@ import { BsChatLeft } from 'react-icons/bs'
 import { RiNotification3Line } from 'react-icons/ri'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { Cart, Chat, Notification, UserProfile } from '.'
-import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
+import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import avatar from '../data/avatar.jpg'
 import { useStateContext } from '../contexts/ContextProvider'
 
@@ -19,7 +19,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       type='button'
       onClick={customFunc}
       style={{ color }}
-      className='relative text-xl rounded-full p-3 hover:bg-light-gray'
+      className='relative text_xl rounded-full p-3 hover:bg-light-gray'
     >
       <span
         style={{ background: dotColor }}
@@ -33,7 +33,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 function Navbar () {
   // eslint-disable-next-line no-unused-vars
-  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize } = useStateContext()
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, screenSize, setScreenSize } = useStateContext()
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth)
@@ -74,14 +74,14 @@ function Navbar () {
         />
         <NavButton
           title='Chat'
-          dotColor='#03C1D7'
+          dotColor='#03C9D7'
           customFunc={() => handleClick('chat')}
           color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title='Notification'
-          dotColor='#03C1D7'
+          dotColor='#03C9D7'
           customFunc={() => handleClick('notification')}
           color={currentColor}
           icon={<RiNotification3Line />}
@@ -91,25 +91,16 @@ function Navbar () {
           position='BottomCenter'
         >
           <div
-            className='
-          flex
-          items-center
-          gap-2
-          cursor-pointer
-          p-1
-          hover:bg-light-gray
-          rounded-lg
-        '
+            className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
             onClick={() => handleClick('userProfile')}
           >
             <img
               className='rounded-full w-8 h-8'
-              src={avatar}
-              alt='imagen de perfil de usuario'
+              src={avatar} alt='imagen de perfil de usuario'
             />
             <p>
               <span className='text-gray-400 text-14'>Hola, </span> {' '}
-              <span className='text-gray-400 font-bold ml-1 text-14 '>ChatBoot</span>
+              <span className='text-gray-400 text-14 font-bold ml-1'>ChatBoot</span>
             </p>
             <MdKeyboardArrowDown className='text-gray-400 text-14' />
           </div>

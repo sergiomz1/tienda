@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { GridComponent, ColumnDirective, ColumnsDirective, Resize, Sort, ContextMenu, Filter, Page, Edit, Inject, ExcelExport, PdfExport } from '@syncfusion/ej2-react-grids'
+import {
+  GridComponent, ColumnDirective, ColumnsDirective, Resize, Sort, ContextMenu,
+  Filter, Page, Edit, Inject, ExcelExport, PdfExport
+} from '@syncfusion/ej2-react-grids'
 import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'
 import { Header } from '../components'
+import { pdfExport } from '@syncfusion/ej2/pivotview'
 
 const Orders = () => {
   return (
@@ -20,7 +24,7 @@ const Orders = () => {
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
             <ColumnDirective
-              key={index} {...item}
+              key={index} {... item}
             />
           ))}
         </ColumnsDirective>

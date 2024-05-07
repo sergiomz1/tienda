@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { GridComponent, ColumnDirective, ColumnsDirective, Page, Edit, Inject, Search, Toolbar } from '@syncfusion/ej2-react-grids'
-import { employeesData, employeesGrid } from '../data/dummy'
+import {
+  GridComponent, ColumnDirective, ColumnsDirective, Page, Edit, Inject, Search,
+  Toolbar
+} from '@syncfusion/ej2-react-grids'
+import { employeesGrid, employeesData } from '../data/dummy'
 import { Header } from '../components'
 
 const Employees = () => {
@@ -21,12 +24,12 @@ const Employees = () => {
         <ColumnsDirective>
           {employeesGrid.map((item, index) => (
             <ColumnDirective
-              key={index} {...item}
+              key={index} {... item}
             />
           ))}
         </ColumnsDirective>
         <Inject
-          services={[Page, Search, Toolbar]}
+          services={[Page, Edit, Search, Toolbar]}
         />
       </GridComponent>
     </div>

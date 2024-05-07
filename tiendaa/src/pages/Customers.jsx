@@ -1,9 +1,12 @@
 import React from 'react'
-import { GridComponent, ColumnDirective, ColumnsDirective, Page, Selection, Inject, Edit, Toolbar, Sort, Filter } from '@syncfusion/ej2-react-grids'
+import {
+  GridComponent, ColumnDirective, ColumnsDirective, Page, Selection, Edit, Inject, Sort,
+  Toolbar, Filter
+} from '@syncfusion/ej2-react-grids'
 import { customersData, customersGrid } from '../data/dummy'
 import { Header } from '../components'
 
-function Customers () {
+const Customers = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
       <Header
@@ -21,7 +24,7 @@ function Customers () {
         <ColumnsDirective>
           {customersGrid.map((item, index) => (
             <ColumnDirective
-              key={index} {...item}
+              key={index} {... item}
             />
           ))}
         </ColumnsDirective>
